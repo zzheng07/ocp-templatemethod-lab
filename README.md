@@ -17,7 +17,7 @@ There's also an example before and after refactoring placed in separate folders.
 
 1. Fork this repo.
 2. Clone your fork to make a local copy.
-2. Build it.
+2. Build it on your favorite IDE.
 
 ## Making the situation worse...
 
@@ -27,4 +27,4 @@ There's also an example before and after refactoring placed in separate folders.
 * **I want** to drink an Americano coffee
 * **So that** I can remind the old times during the WWII in Italy when we had to dilute espresso with hot water
 
-Add a new type of coffee to ```CoffeMaker``` that follows this recipe: first, ```boilWater()```, then ```brewEspresso()```, then ```addIngredients()``` (which in this case it is just to add more water), and the ```finalTouch()``` is to add sugar and cream.
+Add a new type of coffee to ```CoffeMaker``` that follows this recipe: first, ```boilWater()``` and then ```brewEspresso()``` like the other types of coffee, then ```addIngredients()``` (which in this case it means to add more hot water -- ```System.out.println("Add more hot water")```), and the ```finalTouch()``` is to add sugar and cream (```System.out.println("Add sugar and cream")).
