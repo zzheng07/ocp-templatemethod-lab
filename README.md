@@ -27,4 +27,12 @@ There's also an example before and after refactoring placed in separate folders.
 * **I want** to drink an Americano coffee
 * **So that** I can remind the old times during the WWII in Italy when we had to dilute espresso with hot water
 
-Add a new type of coffee to ```CoffeMaker``` that follows this recipe: first, ```boilWater()``` and then ```brewEspresso()``` like the other types of coffee, then ```addIngredients()``` (which in this case it means to add more hot water -- ```System.out.println("Add more hot water")```), and the ```finalTouch()``` is to add sugar and cream (```System.out.println("Add sugar and cream")).
+Add a new type of coffee to ```CoffeMaker``` that follows this recipe: first, ```boilWater()``` and then ```brewEspresso()``` like the other types of coffee, then ```addIngredients()``` (which in this case it means to add more hot water -- ```System.out.println("Add more hot water")```), and the ```finalTouch()``` is to add sugar and cream (```System.out.println("Add sugar and cream")```).
+
+## ...What's gone wrong?
+
+Even though it is doable to keep adding multiple methods every time you need different types of coffee, it is error-prone, code duplication increases, the class becomes too large, and one day you may not be able to evolve your CoffeeMaker class to another version while you still want to accomodate new types of coffee.
+
+## How to fix it?
+
+*Apply the Open-Closed Principle to make the CoffeeMaker class open for extension and closed for modification by implementing the Template Method design pattern on this design*
