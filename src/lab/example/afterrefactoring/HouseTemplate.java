@@ -2,27 +2,28 @@ package lab.example.afterrefactoring;
 
 public abstract class HouseTemplate {
 
-    //template method, final so subclasses can't override
-    public final void buildHouse(){
-        buildFoundation();
-        buildPillars();
-        buildWalls();
-        buildWindows();
-        System.out.println("House is built.");
-    }
+  // template method, final so subclasses can't override
+  public final void buildHouse() {
+    buildFoundation();
+    buildPillars();
+    buildWalls();
+    buildWindows();
+    System.out.println("House is built.");
+  }
 
-    //default implementation
-    private void buildWindows() {
+  // default implementation
+  private void buildWindows() {
 
-        System.out.println("Building Glass Windows");
-    }
+    System.out.println("Building Glass Windows");
+  }
 
-    //methods to be implemented by subclasses
-    protected abstract void buildWalls();
-    protected abstract void buildPillars();
+  // methods to be implemented by subclasses
+  protected abstract void buildWalls();
 
-    private void buildFoundation() {
+  protected abstract void buildPillars();
 
-        System.out.println("Building foundation with cement, iron rods and sand");
-    }
+  private void buildFoundation() {
+
+    System.out.println("Building foundation with cement, iron rods and sand");
+  }
 }

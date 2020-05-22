@@ -1,16 +1,16 @@
 package lab.example.afterrefactoring;
 
-public class WoodenHouse extends HouseTemplate{
+public class WoodenHouse extends HouseTemplate {
 
-    @Override
-    protected void buildWalls() {
+  @Override
+  protected void buildWalls() {
 
-        System.out.println("Building Wooden Walls");
-    }
+    System.out.println("Building Wooden Walls");
+  }
 
-    @Override
-    protected void buildPillars() {
+  @Override
+  protected void buildPillars() {
 
-        System.out.println("Building Pillars with Wood coating");
-    }
+    System.out.println("Building Pillars with Wood coating");
+  }
 }
